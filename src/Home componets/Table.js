@@ -101,6 +101,7 @@ export default function Table() {
         <thead>
           <tr>
             <th className="sr">ProjectID</th>
+            <th className="sr">Department</th>
             <th className="probSt">Problem statement</th>
             <th className="category">Category</th>
             <th className="domain">Domain</th>
