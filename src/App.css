@@ -518,3 +518,64 @@ border: none;
 text-decoration: underline;
 color: #0056b3;
 }
+
+.curr-upload{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.curr-upload-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  border: 0px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.tag-card-main{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.tag-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF902A;
+  width: 10%;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: white;
+}
+
+.show-btn{
+  background-color: #007bff;
+  border-radius: 5px;
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
