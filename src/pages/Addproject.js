@@ -29,7 +29,7 @@ const AddProjectPage = () => {
   const postDataToBackend = async (data) => {
     try {
       
-      const response = await axios.post(`http://localhost:8080/add/${email}`, data);
+      const response = await axios.post(`https://backend-production-63aa.up.railway.app/add/${email}`, data);
       console.log('data', data)
       console.log('add', email)
       console.log('response', response)
@@ -78,9 +78,9 @@ const AddProjectPage = () => {
   const handleSrsDocxUpload = async () => {
     const formData = new FormData();
     formData.append("file", srsUploadedLink);
-    formData.append("upload_preset", "t53wj7bi");
-    formData.append("cloud_name", "toyesh");
-    formData.append('api_key', "959387661847641");
+    formData.append("upload_preset", "h9wxvugs");
+    formData.append("cloud_name", "dqq9iibbn");
+    formData.append('api_key', "733667837915242");
 
     try {
       const response = await fetch("https://api.cloudinary.com/v1_1/t53wj7bi/image/upload", {
@@ -107,9 +107,9 @@ const AddProjectPage = () => {
   const handleOfferLetterUpload = async () => {
     const formData = new FormData();
     formData.append("file", offerLetter);
-    formData.append("upload_preset", "t53wj7bi");
-    formData.append("cloud_name", "toyesh");
-    formData.append('api_key', "959387661847641");
+    formData.append("upload_preset", "h9wxvugs");
+    formData.append("cloud_name", "dqq9iibbn");
+    formData.append('api_key', "733667837915242");
 
     try {
       const response = await fetch("https://api.cloudinary.com/v1_1/t53wj7bi/image/upload", {
@@ -132,9 +132,9 @@ const AddProjectPage = () => {
   const handleProjectVideoUpload = async () => {
     const formData = new FormData();
     formData.append("file",videoUploadedLink);
-    formData.append("upload_preset", "t53wj7bi");
-    formData.append("cloud_name", "toyesh");
-    formData.append('api_key', "959387661847641");
+    formData.append("upload_preset", "h9wxvugs");
+    formData.append("cloud_name", "dqq9iibbn");
+    formData.append('api_key', "733667837915242");
 
     try {
       const response = await fetch("https://api.cloudinary.com/v1_1/t53wj7bi/video/upload", {

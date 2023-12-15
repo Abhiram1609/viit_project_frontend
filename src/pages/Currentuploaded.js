@@ -32,7 +32,7 @@ export default function Currentuploaded() {
   const myproject = async () => {
     try {
       const email = localStorage.getItem('email');
-      const response = await axios.get(`http://localhost:8080/uploaded-by/${email}`);
+      const response = await axios.get(`https://backend-production-63aa.up.railway.app/uploaded-by/${email}`);
       console.log('dataa', response.data);
 
       // Set the retrieved projects in the state
@@ -47,19 +47,34 @@ export default function Currentuploaded() {
     myproject();
   }, []);
 
+  // return (
+  //   <div>
+  //     <ul className='curr-upload'>
+  //       {projects.map((project) => (
+  //         <p key={project.projectStatement} className='curr-upload-card'>
+  //           <Link to={`/ProjectDetails/${project.projectStatement}`}>
+  //             {project.projectStatement}
+  //           </Link>
+  //         </p>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
+
   return (
-    <div>
-      <ul>
-        {projects.map((project) => (
-          <li key={project.projectStatement}>
-            {/* Display project details as needed */}
-            <Link to={`/ProjectDetails/${project.projectStatement}`}>
-              {project.projectStatement}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+      <div>
+        <ul className='curr-upload'>
+          {projects.map((project) => (
+            <p key={project.projectStatement}>
+              <Link className='custom-link' to={`/ProjectDetails/${project.projectStatement}`}>
+                <div className='curr-upload-card'>
+                  {project.projectStatement}
+                </div>
+              </Link>
+            </p>
+          ))}
+        </ul>
+      </div>
+    );
 }
 

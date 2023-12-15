@@ -19,7 +19,7 @@ export default function SignupPage() {
   async function save(event) {
     event.preventDefault();
     try {
-        const response = await axios.post("http://localhost:8080/save", {
+        const response = await axios.post("https://backend-production-63aa.up.railway.app/save", {
           email: email,
           password: password,
           }).then((response) => {

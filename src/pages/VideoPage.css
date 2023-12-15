@@ -1,33 +1,84 @@
 /* Custom CSS for VideoPage */
-/* Custom CSS for VideoPage */
+
+/* Adjusting padding for the video page */
 .video-page {
-    padding-top: 50px;
-  }
-  
-  .video-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .info-card {
-    margin-bottom: 20px;
-  }
-  
-  .info-card ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .info-card ul li {
-    margin-bottom: 5px;
-  }
-  
+  padding-top: 50px;
+}
+
+/* Container for the video */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* Styling for the video iframe */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Info card style */
+.info-card {
+  margin-bottom: 20px;
+  border-bottom: #007bff 5px solid;
+}
+
+.video-container{
+  margin-bottom: 20px;
+  border-bottom: #007bff 5px solid;
+  border-radius: 10px;
+}
+
+/* Unordered list style within info card */
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styling for list items within info card */
+.info-card ul li {
+  margin-bottom: 5px;
+}
+
+/* Marks box appearance */
+.marks-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px; /* Increased padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for text within marks box */
+.marks-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+/* Edit marks button style */
+.edit-marks-btn {
+  display: inline-block; /* Changed to inline-block for better alignment */
+  margin-top: 15px;
+  padding: 10px 20px; /* Adjusted padding for a better button size */
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745; /* Bootstrap success color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Removed underline */
+  text-align: center; /* Center-aligned text */
+}
+
+/* Hover effect for edit marks button */
+.edit-marks-btn:hover {
+  background-color: #218838; /* Darker shade for hover effect */
+}

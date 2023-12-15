@@ -15,14 +15,14 @@ export default function Profile() {
                 <div className="info-container">
                     <div className="prn-year">
                         <h3 className="main">PRN</h3>
-                        <h3 className="main-info">22010abc</h3>
+                        <h3 className="main-info">22010458</h3>
                         <h3 className="main">Year</h3>
                         <h3 className="main-info">B.Tech</h3>
                         
                     </div>
                     <div className="mail-mob">
                         <h3 className="main">Email ID</h3>
-                        <h3 className="main-info">xyz.22010abcg@viit.ac.in</h3>
+                        <h3 className="main-info">abhiram.22010458@viit.ac.in</h3>
                         <h3 className="main">Department</h3>
                         <h3 className="main-info">Computer Engineering</h3>
                         {/* <h3 className="main">Mobile No</h3>

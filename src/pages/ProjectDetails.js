@@ -1,38 +1,48 @@
-// Install Bootstrap by running: npm install bootstrap
-import React, { useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './VideoPage.css';
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import NavbarCustom from '../Home componets/Navbar_custom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-
 const VideoPage = () => {
-    const [project,setProject]=useState([]);
-    const { projectStatement } = useParams();
-    
-    const getProject = async () => {
-        
-        try {
-          const response = await axios.get(`http://localhost:8080/uploaded/${projectStatement}`);
-          const data = await response.data;
-          setProject(data);
-          console.log('project', data)
-        } catch (error) {
-          console.log('error', error)
-        }
-      };
-    
-      useEffect(() => {
-        getProject();
-      }, []);
+  const [project, setProject] = useState([]);
+  const [marks, setMarks] = useState(0);
+  const [showEdit, setShowEdit] = useState(false);
+  const { projectStatement } = useParams();
+  const userEmail = localStorage.getItem('email');  
+
+  const getProject = async () => {
+    try {
+      const response = await axios.get(`https://backend-production-63aa.up.railway.app/uploaded/${projectStatement}`);
+      const data = await response.data;
+      setProject(data);
+  
+      setMarks(data.marks || 0);
+
+      setShowEdit(data.faculty_email === userEmail);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+  useEffect(() => {
+    getProject();
+  }, []);
+
+  const handleEditMarks = () => {
+    // Add logic to handle editing marks, e.g., open a modal or navigate to a new page
+    console.log('Editing marks...');
+  };
+
   return (
     <>
     <NavbarCustom />
     <Container className="video-page">
       <Row>
-        <h1>Project Details</h1>
+        <h1>{project.projectStatement}</h1>
         <Col md={4}>
+          
           <Card className="info-card">
             <Card.Body>
               <Card.Title>Problem Statement</Card.Title>
@@ -88,6 +98,16 @@ const VideoPage = () => {
         </Col>
 
         <Col md={8}>
+        <Card className="marks-box">
+            <Card.Body>
+              <div className="marks-text">{`${marks}/10 Marks`}</div>
+              {showEdit && (
+                <button className="edit-marks-btn" onClick={handleEditMarks}>
+                  Edit Marks
+                </button>
+              )}
+            </Card.Body>
+        </Card>
           <div className="video-container">
             <iframe
               title="Example Video"
@@ -103,11 +123,11 @@ const VideoPage = () => {
             <Card.Body>
               <Card.Title>Tags</Card.Title>
               <Card.Text>
-                {/* <Badge variant="primary">Tag 1</Badge>{' '}
-                <Badge variant="info">Tag 2</Badge>{' '}
-                <Badge variant="success">Tag 3</Badge> */}
-
-                {project.stringTag}
+                <div className='tag-card-main'>
+                  {project.stringTag?.split(",").map((tag)=>(
+                    <p  className='tag-card'>{tag}</p>
+                  ))}
+                </div>
               </Card.Text>
             </Card.Body>
           </Card>
