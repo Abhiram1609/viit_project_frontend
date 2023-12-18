@@ -16,7 +16,7 @@ export default function Projectpage() {
     <NavbarCustom/>
     <Dropdown className="dropdownnew"  autoClose="outside" onToggle={handleDropdown1Toggle}>
         <Dropdown.Toggle className="buttonnewpro" variant="light" id="dropdown-autoclose-inside">
-         Currently uploaded projects
+         My uploaded projects
         </Dropdown.Toggle>
 
         <Dropdown.Menu className='dropdownsectionnewpro'>

@@ -1,0 +1,23 @@
+.nav-title{
+    border-bottom: 3px solid white;
+    color: white;
+  }
+
+.nav-items{
+    /* border-bottom: 1px solid black; */
+    transition: transform ease 0.25s;
+    width: 100%;
+    color: white;
+    padding-left: 10px;
+}
+
+.nav-items:hover{
+    transform: scale(1.05);
+    background-color: white;
+    border-radius: 10px;
+    color: #0d6efd;
+}
+
+.nav-body{
+    background-color: #0d6efd;
+}

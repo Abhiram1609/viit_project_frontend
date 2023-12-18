@@ -354,7 +354,7 @@ const AddProjectPage = () => {
         required
       />
       </Form.Group>
-      <Button variant="transparent"  style={{backgroundColor:'blue' , color: 'white' ,marginBottom:'2px' }} onClick={handleSendEmail} type="Send email">
+      <Button variant="transparent"  style={{backgroundColor:'#0d6efd' , color: 'white' ,marginBottom:'2px' }} onClick={handleSendEmail} type="Send email">
             Send Email
       </Button>
     < Form.Group controlId="domain">

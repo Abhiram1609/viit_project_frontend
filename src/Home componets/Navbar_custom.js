@@ -21,6 +21,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import profileimg from "../IMG/user_1177568.png";
+import "../Home componets/nav.css";
 
 
 function NavbarCustom() {
@@ -38,21 +39,21 @@ function NavbarCustom() {
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="start"
+          className="nav-body"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-              VIIT PROJECTS
+            <Offcanvas.Title  className="nav-title" id={`offcanvasNavbarLabel-expand-${expand}`}>
+              ProjectoPedia
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/Home">Home</Nav.Link>
-              <Nav.Link href="/projectpage">Add new projects</Nav.Link>
-              <Nav.Link href="/projectPage">Previously uploaded projects</Nav.Link>
 
-              <Nav.Link href="#action2">Contact</Nav.Link>
-              <Nav.Link href="/">Logout</Nav.Link>
-              
+              <Nav.Link className='nav-items' href="/Home">Home</Nav.Link>
+              <Nav.Link className='nav-items' href="/projectpage">Add new projects</Nav.Link>
+              <Nav.Link className='nav-items' href="/projectPage">My uploaded projects</Nav.Link>
+              <Nav.Link className='nav-items' href="#action2">Contact</Nav.Link>
+              <Nav.Link className='nav-items' href="/">Logout</Nav.Link>
              
             </Nav>
           </Offcanvas.Body>

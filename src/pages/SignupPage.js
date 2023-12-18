@@ -51,7 +51,7 @@ export default function SignupPage() {
 
   return (
     <div>
-    <Toaster/>
+    {/* <Toaster/> */}
     <div className="signin-container">
       <div className="left-section">
         <img
